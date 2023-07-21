@@ -1,0 +1,11 @@
+// ignore_for_file: constant_identifier_names
+
+const String STORAGE_USER_TOKEN_KEY = 'TOKEN-USER';
+
+const String STORAGE_USER_PROFILE_KEY = 'PROFILE-USER';
+
+const String STORAGE_DEVICE_FIRST_OPEN_KEY = 'DEVICE-FIRST_OPEN';
+
+const String STORAGE_INDEX_NEW_CACHE_KEY = 'CACHE-INDEX-NEWS';
+
+const String STORAGE_LANGUAGE_CODE = 'LANGUAGE-CODE';

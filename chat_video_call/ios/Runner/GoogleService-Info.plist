@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>811004296008-bhs1bgrupoiod94sg4salpqjc3kv57de.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.811004296008-bhs1bgrupoiod94sg4salpqjc3kv57de</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>811004296008-7m2lq2c9k4mjgf3vc3dnf84bllsmhujt.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB9NxsJYYekvou7-iRO7JFRk3XJklFBsaE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>811004296008</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.chatVideoCall</string>
+	<key>PROJECT_ID</key>
+	<string>flutter-video-call-chat</string>
+	<key>STORAGE_BUCKET</key>
+	<string>flutter-video-call-chat.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:811004296008:ios:f92e59ed5fb506ff41517d</string>
+</dict>
+</plist>
