@@ -6,4 +6,6 @@ class AppRoutes {
   static const String SignIn = "/sign-in";
 
   static const String Message = "/message";
+
+  static const String Profile = "/profile";
 }

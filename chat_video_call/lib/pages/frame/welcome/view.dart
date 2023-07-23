@@ -8,13 +8,16 @@ class WelcomePage extends GetView<WelcomeController> {
   const WelcomePage({super.key});
 
   Widget _buildHeaderTitle(String title) {
-    return Text(
-      title,
-      style: TextStyle(
-        fontSize: 45.0.sp,
-        fontFamily: "Montserrat",
-        color: AppColors.primaryElementText,
-        fontWeight: FontWeight.w500,
+    return Hero(
+      tag: 'Chatty .',
+      child: Text(
+        title,
+        style: TextStyle(
+          fontSize: 45.0.sp,
+          fontFamily: "Montserrat",
+          color: AppColor.primaryElementText,
+          fontWeight: FontWeight.w500,
+        ),
       ),
     );
   }
@@ -22,7 +25,7 @@ class WelcomePage extends GetView<WelcomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.primaryElement,
+      backgroundColor: AppColor.primaryElement,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

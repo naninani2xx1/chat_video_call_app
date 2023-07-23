@@ -2,6 +2,7 @@
 
 import 'package:chat_video_call/common/middlewares/router_auth.dart';
 import 'package:chat_video_call/common/routes/routes.dart';
+import '../../pages/profile/index.dart';
 import '../../pages/frame/welcome/index.dart';
 import '../../pages/message/index.dart';
 import '../../pages/frame/signin/index.dart';
@@ -34,6 +35,14 @@ class AppPages {
       page: () => const MessagePage(),
       binding: MessageBinding(),
       middlewares: [RouteAuthMiddleware(priority: 1)],
+    ),
+
+    //page message
+    GetPage(
+      name: AppRoutes.Profile,
+      page: () => const ProfilePage(),
+      binding: ProfileBinding(),
+      //middlewares: [RouteAuthMiddleware(priority: 1)],
     ),
   ];
 }

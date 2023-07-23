@@ -1,5 +1,7 @@
+import 'package:chat_video_call/common/style/theme.dart';
 import 'package:chat_video_call/global.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'common/routes/pages.dart';
@@ -21,12 +23,10 @@ class ChattyApp extends StatelessWidget {
         return GetMaterialApp(
           title: 'Chatty',
           debugShowCheckedModeBanner: false,
-          theme: ThemeData(
-            colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
-            useMaterial3: true,
-          ),
+          theme: AppTheme.light,
           initialRoute: AppPages.INITIAL,
           getPages: AppPages.routes,
+          builder: EasyLoading.init(),
         );
       },
     );

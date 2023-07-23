@@ -1,3 +1,4 @@
+import 'package:chat_video_call/common/style/theme.dart';
 import 'package:chat_video_call/common/values/assets.dart';
 import 'package:chat_video_call/common/values/colors.dart';
 import 'package:chat_video_call/pages/frame/signin/controllers.dart';
@@ -5,36 +6,37 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-import '../../../common/values/widgets.dart';
-
 class SignInPage extends GetView<SignInController> {
   const SignInPage({super.key});
 
   Widget _buildLogo() {
     return Container(
       margin: EdgeInsets.only(top: 100.h, bottom: 80.h),
-      child: Text(
-        'Chatty .',
-        textAlign: TextAlign.center,
-        style: TextStyle(
-          color: AppColors.primaryText,
-          fontWeight: FontWeight.bold,
-          fontFamily: "Montserrat",
-          fontSize: 34.0.sp,
+      child: Hero(
+        tag: 'Chatty .',
+        child: Text(
+          'Chatty .',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            color: AppColor.primaryText,
+            fontWeight: FontWeight.bold,
+            fontFamily: "Montserrat",
+            fontSize: 34.0.sp,
+          ),
         ),
       ),
     );
   }
 
   Widget _buildLogin(String type, [String? path]) => GestureDetector(
-        onTap: () {},
+        onTap: () => controller.handleSignIn(type),
         child: Container(
           width: 290.w,
           height: 44.h,
           decoration: BoxDecoration(
-            color: AppColors.primaryBackground,
-            borderRadius: const BorderRadius.all(
-              Radius.circular(radiusWidget / 2),
+            color: AppColor.primaryBackground,
+            borderRadius: BorderRadius.all(
+              Radius.circular(AppTheme.radius / 2),
             ),
             boxShadow: [
               BoxShadow(
@@ -52,10 +54,10 @@ class SignInPage extends GetView<SignInController> {
                   ? const SizedBox()
                   : Padding(
                       padding: EdgeInsets.only(
-                        top: (paddingWidget / 2).h,
-                        bottom: (paddingWidget / 2).h,
-                        left: (paddingWidget * 2.5).w,
-                        right: (paddingWidget).w,
+                        top: (AppTheme.horizontalMargin / 2).h,
+                        bottom: (AppTheme.horizontalMargin / 2).h,
+                        left: (AppTheme.horizontalMargin * 2.5).w,
+                        right: (AppTheme.horizontalMargin).w,
                       ),
                       child: Image.asset(
                         path,
@@ -86,7 +88,7 @@ class SignInPage extends GetView<SignInController> {
 
   Padding _buildOrLogin() {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: paddingWidget * 3.h),
+      padding: EdgeInsets.symmetric(vertical: AppTheme.horizontalMargin * 3.h),
       child: SizedBox(
         width: 290.w,
         child: Row(
@@ -96,20 +98,20 @@ class SignInPage extends GetView<SignInController> {
             Expanded(
               child: Divider(
                 height: 2.h,
-                color: AppColors.primarySecondaryElementText,
+                color: AppColor.primarySecondaryElementText,
               ),
             ),
             const Text(
               '     or     ',
               style: TextStyle(
                 fontSize: 14.0,
-                color: AppColors.primarySecondaryElementText,
+                color: AppColor.primarySecondaryElementText,
               ),
             ),
             Expanded(
               child: Divider(
                 height: 2.h,
-                color: AppColors.primarySecondaryElementText,
+                color: AppColor.primarySecondaryElementText,
               ),
             ),
           ],
@@ -121,7 +123,7 @@ class SignInPage extends GetView<SignInController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.primarySecondaryBackground,
+      backgroundColor: AppColor.primarySecondaryBackground,
       body: Center(
         child: Column(
           children: [
@@ -142,7 +144,7 @@ class SignInPage extends GetView<SignInController> {
                     'Already have an account?',
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      color: AppColors.primaryText,
+                      color: AppColor.primaryText,
                       fontSize: 12.0.sp,
                       fontWeight: FontWeight.normal,
                     ),
@@ -151,7 +153,7 @@ class SignInPage extends GetView<SignInController> {
                     'Sign up here?',
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      color: AppColors.primaryElement,
+                      color: AppColor.primaryElement,
                       fontSize: 12.0.sp,
                       fontWeight: FontWeight.normal,
                     ),

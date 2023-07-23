@@ -24,6 +24,8 @@ class UserStore extends GetxController {
 
   bool get hasToken => token.isNotEmpty;
 
+  set setIsLogin(bool value) => _isLogin.value = value;
+
   @override
   void onInit() {
     super.onInit();
@@ -50,7 +52,8 @@ class UserStore extends GetxController {
   Future<void> saveProfile(UserItem profile) async {
     _isLogin.value = true;
 
-    StorageService.to.setString(STORAGE_USER_PROFILE_KEY, jsonEncode(profile));
+    StorageService.to
+        .setString(STORAGE_USER_PROFILE_KEY, jsonEncode(profile.toJson()));
 
     setToken(profile.accessToken!);
   }

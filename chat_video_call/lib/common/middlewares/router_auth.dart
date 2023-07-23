@@ -1,5 +1,6 @@
 import 'package:chat_video_call/common/routes/routes.dart';
 import 'package:chat_video_call/common/store/user.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -12,6 +13,10 @@ class RouteAuthMiddleware extends GetMiddleware {
 
   @override
   RouteSettings? redirect(String? route) {
+    // if (kDebugMode) {
+    //   print("Routing auth middleware $route");
+    //   print("${UserStore.to.isLogin}, ${UserStore.to.profile}");
+    // }
     if (UserStore.to.isLogin ||
         route == AppRoutes.SignIn ||
         route == AppRoutes.Initial) {
